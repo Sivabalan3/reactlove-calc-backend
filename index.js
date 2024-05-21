@@ -8,7 +8,6 @@ app.use(cors());
 app.use(express.json());
 const url = process.env.ATLAS_URL;
 mongoose.connect(url, {
-  useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 const nameSchema = new mongoose.Schema({
@@ -29,5 +28,5 @@ app.listen(5000, () => console.log("Server started on port 5000"));
 
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log('Mongoose DB connected successfully');
+  console.log('Mongoose DB connected successfully love calc');
 });
